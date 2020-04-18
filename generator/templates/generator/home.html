@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    #header {
+        font-family:montserrat;
+        font-weight:700;
+    }
+    .input {
+        font-family:Arial;
+        font-weight:bold;
+    }
+</style> -->
+
+<div class="container text-center">
+    <h1 id="header">Password Generator</h1>
+
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+        </select> Length
+        <br>
+        <input class="input" type="checkbox" name="uppercase"> Uppercase 
+        <br>
+        <input class="input" type="checkbox" name="numbers"> Numbers
+        <br>
+        <input class="input" type="checkbox" name="special"> Special Characters
+        <br>
+
+
+        <input class="input" type="submit" value="Generate Password" class="btn btn-primary">
+    </form>
+    <br>
+    <a href='{% url 'about' %}' class="text-center">About</a>
+</div> 
